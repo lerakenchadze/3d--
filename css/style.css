@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('RobotoRegular'),
+        url('../fonts/RobotoRegular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('RobotoBold'),
+        url('../fonts/RobotoBold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background: var(--white-color);
+}
+
+/* glob */
+/* для сброса стилей у списков */
+.list-reset {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    list-style: none;
+}
+
+/* для сброса стилей у кнопок */
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+:root {
+    --blue-color: #3F2AFF;
+    --white-color: #fff;
+    --background-color: #212133;
+    --descr-color: #85859B;
+    --grey-color: #EDF0F9;
+    --darkGrey-color: #666666;
+    --footer-color: #2E2B44;
+    --focus-color: #1c1e82;
+    --hover-color: #090cc1;
+    --active-color: #3d3fce;
+    --link-color: #c372c8;
+}
+
+
+.btn {
+    border-radius: 20px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    transition: background-color 0.3s ease-in-out;
+}
+  
+  .btn:focus {
+    outline: none;
+    background-color: var(--focus-color);
+  }
+  
+  .btn:hover {
+    outline: none;
+    background-color: var(--hover-color);
+  }
+  
+  .btn:active {
+    background-color: var(--active-color);
+  }
+
+  
+.link {
+    transition: outline 0.3s ease-in-out;
+}
+
+.link:focus {
+    outline-offset: 3px;
+    outline: 3px solid var(--darkGrey-color);
+}
+
+.link:hover {
+    outline: none;
+}
+
+.link:active {
+    outline: none;
+}
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section__title {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+/* header */
+
+.header {
+    padding-top: 29px;
+    background-color: var(--blue-color);
+}
+
+.header__block {
+    flex-wrap: wrap;
+    padding-bottom: 27px;
+    align-items: center;
+}
+
+.header__logo {
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.header__list {
+    column-gap: 57px;
+    align-items: center;
+}
+
+.header__item {
+    flex-shrink: 0;
+}
+
+.header__link {
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header__link:focus {
+    color: var(--footer-color);
+}
+
+.header__link:hover {
+    color: var(--link-color);
+}
+
+.header__link:active {
+    color: var(--link-color);
+}
+
+
+
+
+/* main */
+
+.hero {
+    background: radial-gradient(#555681, #212133);
+}
+
+.hero__block {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    background-image: url('../img/hero-back.png');
+    background-size: contain 632.86px 593px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.hero__title {
+    margin-bottom: 26px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.hero__descr {
+    margin-bottom: 64px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+
+.hero__btn {
+    padding: 24px 76px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+}
+
+/* about */
+
+.about__block {
+    margin-bottom: 24px;
+    background-image: url('../img/about-1100.png');
+    background-size: 160px 142px;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-bottom: 30px;
+}
+
+.about__title {
+    margin: 0;
+    margin-bottom: 16px;
+    padding-left: 190px;
+}
+
+.about__descr {
+    padding-left: 190px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* .about__list {
+    padding-left: 0;
+} */
+
+.about__item-img {
+    margin-right: 30px;
+}
+
+.about__item-descr {
+    padding-top: 10px;
+}
+
+
+/* teachers */
+
+.teachers {
+    margin-bottom: 75px;
+    background-color: var(--background-color);
+}
+
+.teachers__block {
+    padding-top: 74px;
+    padding-bottom: 74px;
+}
+
+.teachers__title {
+    color: var(--white-color);
+    margin-bottom: 24px;
+}
+
+.teachers__item-block {
+    padding-top: 30px;
+}
+
+
+.teachers__item-title {
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.teachers__item-descr {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--descr-color);
+}
+
+.teachers__pic {
+    margin-bottom: 30px;
+}
+
+.teachers__pic img {
+    width: 100%;
+}
+
+/* courses */
+
+.courses {
+    margin-bottom: 48px;
+}
+
+.courses__title {
+    margin-bottom: 23px;
+}
+
+.courses__item-content {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    min-height: 480px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: var(--grey-color);
+}
+
+.courses__item-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.courses__item-descr {
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--darkGrey-color);
+}
+
+.courses__item-block {
+    padding: 30px;
+}
+
+.courses__item-btn {
+    position: absolute;
+    bottom: 61px;
+    padding: 21px 59px 21px 59px;
+    color: var(--white-color);
+}
+
+.courses__item-pic img{
+    width: 100%;
+}
+
+/* footer */
+
+.footer__contacts {
+    background-color: var(--footer-color);
+}
+
+.footer__list {
+    padding: 28px 0 28px 0;
+    justify-content: center;
+}
+
+.footer__item {
+    margin-right: 33px;
+}
+
+.footer__text {
+    text-align: center;
+    font-size: 13px;
+    line-height: 15.23px;
+    font-weight: 400;
+}
+
+.reg {
+    color: var(--blue-color);
+}
